@@ -55,7 +55,7 @@ const typeToComponent: Record<string, any> = {
  * endpoint using the 'get' function and assign it to the 'metadata' reactive object.
  */
 onMounted( async () => {
-    const endpoint: string = '../public/data/Metadados.json'; // TODO: Change to 'https://masterlink-mock-api.mwe.pt/MlkApi/bpm_metadata/1' later
+    const endpoint: string = 'https://masterlink-mock-api.mwe.pt/MlkApi/bpm_metadata/1'; // Note: Change to '../public/data/Metadados.json' if masterlink api is not available
     Object.assign( metadata, await get({ endpoint }) );
 });
 
