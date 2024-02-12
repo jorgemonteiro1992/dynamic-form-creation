@@ -1,0 +1,133 @@
+// =============================================================================
+// Imports
+// =============================================================================
+@import '@/styles/utils/_reset';
+
+// =============================================================================
+// Global style
+// =============================================================================
+html,
+body {
+    @include dimensions( 100%, 100% );
+    font-family: 'Courier New', sans-serif;
+    @include typography-specs( 16px, 18px, 300 );
+}
+
+body {
+    @include elements-colors( $color-black, $color-black );
+    overflow-x: hidden;
+}
+
+::selection { // altera a cor de selecção
+    background: $color-orange;
+    color: $color-white;
+}
+
+::-moz-selection {
+    background: $color-orange;
+    color: $color-white;
+}
+
+// =============================================================================
+// General Classes - positions and displays
+// =============================================================================
+.position {
+    &--relative {
+        position: relative;
+    }
+    &--absolute {
+        position: absolute;
+    }
+    &--fixed {
+        position: fixed;
+    }
+}
+
+.display {
+    &--flex {
+        display: flex;
+    }
+    &--grid {
+        display: grid;
+    }
+    &--block {
+        display: block;
+    }
+    &--inline-b {
+        display: inline-block;
+    }
+    &--none {
+        display: none;
+    }
+}
+
+.flex {
+    &--center {
+        @include position-grid( center, center );
+    }
+}
+
+// =============================================================================
+// General classes - backgrounds and colors
+// =============================================================================
+.background {
+    &--white {
+        background: $color-white;
+    }
+    &--orange {
+        background: $color-orange;
+    }
+    &--black {
+        background: $color-black;
+    }
+}
+
+.color {
+    &--black {
+        color: $color-black;
+    }
+    &--white {
+        color: $color-white;
+    }
+    &--orange {
+        color: $color-orange;
+    }
+}
+
+// =============================================================================
+// General classes - typography
+// =============================================================================
+.capitalize::first-letter {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+// =============================================================================
+// General Classes - cursors
+// =============================================================================
+.pointer {
+    cursor: pointer;
+}
+
+.grab {
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.disable {
+    cursor: no-drop;
+    pointer-events: none;
+}
+
+// =============================================================================
+// General Classes - overflows
+// =============================================================================
+.overflow {
+    &--hidden {
+        overflow: hidden;
+    }
+}

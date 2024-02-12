@@ -1,0 +1,15 @@
+.field {
+    width: 100%;
+}
+
+.field-text, .field-password, .field-int-number {
+    &__label {
+        margin-bottom: 8px;
+        color: $color-white;
+    }
+    &__input {
+        padding: 5px 10px;
+        @include dimensions( 100%, 35px );
+        @include rounded-corner( 5px );
+    }
+}
